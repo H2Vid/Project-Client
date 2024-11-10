@@ -1,3 +1,4 @@
+import Image from "next/image"
 import React from "react"
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
         </div>
         <div className="w-full h-auto">
           <div className="relative w-11/12 sm:w-96 h-64 sm:h-80 mx-auto mt-10 bg-teal-100 flex items-center justify-center overflow-hidden">
-            <img src="img/klinik.jpg" alt="Produk" className="relative w-3/4 sm:w-[320px] h-48 sm:h-64 object-cover z-10 transition-transform duration-300 ease-out hover:scale-105 hover:rotate-2" />
+            <Image width={1000} height={10000} src="/img/klinik.jpg" alt="Produk" className="relative w-3/4 sm:w-[320px] h-48 sm:h-64 object-cover z-10 transition-transform duration-300 ease-out hover:scale-105 hover:rotate-2" />
 
             <div className="absolute bottom-0 left-0 w-20 h-16 sm:w-28 sm:h-24 bg-[#00ADAA] transform -translate-y-3 translate-x-2 sm:-translate-y-4 sm:translate-x-3"></div>
 

@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="relative flex flex-wrap items-center justify-between py-2 w-[95%] mx-auto lg:justify-between ">
+      <nav className="relative flex flex-wrap items-center justify-between py-2 space-x-3 w-[95%] mx-auto lg:justify-center ">
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-900">
             <span>
@@ -31,7 +31,7 @@ export const Navbar = () => {
           <ul className="flex flex-col lg:flex-row items-end justify-between flex-1 pt-6 list-none lg:pt-0 lg:flex lg:space-x-6">
             {navigation.map((menu, index) => (
               <li className="nav__item" key={index}>
-                <Link href="/" className="block px-4 py-2 text-[19px] font-normal text-gray-800 no-underline rounded-md dark:text-black hover:text-[#22605f] focus:text-[#5efffc]">
+                <Link href="/" className="block px-4 py-2 text-[19px] font-normal text-gray-800 no-underline rounded-md dark:text-black hover:text-[#22605f] focus:text-[#00ADAA]">
                   {menu}
                 </Link>
               </li>
