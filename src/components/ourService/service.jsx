@@ -1,69 +1,55 @@
+import Image from "next/image"
+import Link from "next/link"
 import React from "react"
-// import img from "next/img"
 
-const OurService = () => {
-  const MyService = [
+const Service = () => {
+  const Services = [
     {
-      img: "img/service1.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Konsultasi Dokter Umum",
-      ket: "Layanan konsultasi dengan dokter umum untuk berbagai keluhan medis. Kami siap membantu mendiagnosis penyakit umum, memberikan resep obat, dan memberikan saran tentang cara merawat kesehatan Anda. Layanan ini tersedia untuk segala usia, dari anak-anak hingga orang dewasa.",
+      img: "/img/klinik.jpg",
+      title: "Klinik UMUM",
+      subtitle:
+        "Klinik Umum kami memberikan layanan medis yang komprehensif untuk seluruh keluarga, mulai dari pemeriksaan kesehatan rutin, pengobatan penyakit ringan, hingga penanganan darurat. Dengan dokter berpengalaman dan fasilitas yang nyaman, kami siap membantu menjaga kesehatan Anda setiap saat.",
     },
     {
-      img: "img/service2.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Pemeriksaan Kesehatan",
-      ket: "Pemeriksaan kesehatan menyeluruh untuk memantau kondisi tubuh Anda. Kami menyediakan layanan pemeriksaan fisik, tes darah, pemeriksaan jantung, dan lainnya untuk memastikan bahwa tubuh Anda tetap sehat dan bebas dari penyakit.",
+      img: "/img/klinik.jpg",
+      title: "Klinik PARU",
+      subtitle:
+        "Klinik Paru kami menyediakan layanan konsultasi dan perawatan untuk berbagai penyakit saluran pernapasan, termasuk asma, TB, dan gangguan paru lainnya. Dilengkapi dengan fasilitas pemeriksaan dan diagnostik terkini untuk memastikan kesehatan paru Anda tetap optimal.",
     },
     {
-      img: "img/service3.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Layanan Vaksinasi",
-      ket: "Vaksinasi untuk melindungi Anda dan keluarga dari berbagai penyakit menular. Layanan vaksinasi kami meliputi vaksinasi anak, vaksin flu, vaksin hepatitis, dan banyak lagi. Kami juga memberikan informasi mengenai pentingnya vaksinasi untuk kesehatan jangka panjang.",
-    },
-    {
-      img: "img/service3.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Layanan Laboratorium",
-      ket: "Layanan laboratorium untuk mendiagnosis berbagai penyakit melalui tes darah, urin, dan sampel lainnya. Kami bekerja sama dengan laboratorium terkemuka untuk memberikan hasil tes yang cepat dan akurat, yang akan membantu dokter dalam proses pengobatan.",
-    },
-    {
-      img: "img/service2.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Perawatan Lansia",
-      ket: "Perawatan khusus untuk lansia, dengan fokus pada kesehatan fisik dan mental mereka. Layanan ini mencakup pemeriksaan rutin, perawatan penyakit kronis, serta pendampingan dalam menjaga kualitas hidup lansia. Kami memberikan perawatan yang penuh perhatian dan profesional.",
-    },
-    {
-      img: "img/service1.jpg", // Ganti dengan path gambar lokal Anda
-      service: "Rawat Inap",
-      ket: "Fasilitas rawat inap untuk pasien yang membutuhkan perawatan intensif atau pemulihan jangka panjang. Kami memiliki ruang rawat inap yang nyaman dan dilengkapi dengan fasilitas medis lengkap untuk memantau kesehatan pasien dengan teliti setiap hari.",
+      img: "/img/klinik.jpg",
+      title: "Klinik GIGI",
+      subtitle:
+        "Klinik Gigi kami menawarkan perawatan gigi dan mulut lengkap, mulai dari pemeriksaan rutin, pembersihan gigi, hingga perawatan saluran akar dan pemasangan kawat gigi. Dengan tenaga medis profesional dan peralatan modern, kami berkomitmen menjaga kesehatan gigi dan senyum Anda.",
     },
   ]
+
   return (
-    <div className="w-[95%] lg:flex lg:justify-between h-auto mx-auto mt-8 p-10">
-      <div className="bg-gray-50 text-gray-900">
-        <header className="bg-[#00ADAA] text-white py-6">
-          <div className="container mx-auto text-center">
-            <h1 className="text-3xl font-semibold">Layanan Klinik Umum</h1>
-            <p className="mt-2">Kami memberikan perawatan medis yang berkualitas untuk keluarga Anda.</p>
-          </div>
-        </header>
-        <section className="py-16">
-          <div className="container mx-auto px-6 text-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-              {/* Service Card 1 */}
-              {MyService.map((card, i) => {
-                return (
-                  <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out transform">
-                    <div className="mb-4">
-                      <img src={card.img} alt="Konsultasi Dokter" width={200} height={200} className="w-full h-48 object-cover rounded-md transition-transform duration-300 ease-in-out transform hover:scale-110" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-blue-600">{card.service}</h3>
-                    <p className="text-gray-600 break-words">{card.ket}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+    <div className="w-[95%] p-10 mx-auto ">
+      <h3 className="text-5xl mx-auto tracking-wide font-semibold">Layanan Kami</h3>
+      <hr className="w-28 h-1 bg-[#00ADAA] border-0 rounded mt-4 dark:bg-[#00ADAA"></hr>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 h-auto mx-auto mt-8 mb-20">
+        {Services.map((service, i) => {
+          return (
+            <Link href="#" key={i} className="relative w-full sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] text-[#2e2d31] overflow-hidden rounded-2xl group">
+              {/* Gambar sebagai area hover */}
+              <Image width={1000} height={1000} src={service.img} alt="" className="w-full h-full object-cover group-hover:opacity-80 transition-all duration-300 ease-in-out" />
+
+              {/* Card Content */}
+              <div className="absolute left-0 bottom-0 w-full p-5 bg-[#ffffff] shadow-sm rounded-tl-2xl transform translate-y-[150px] group-hover:translate-y-0 transition-all duration-300 ease-in-out min-h-[200px] flex flex-col justify-between">
+                <span className="font-bold text-gray-900 leading-[15px] block mb-3">{service.title}</span>
+                <span className="text-sm mb-2 line-clamp-4 text-gray-600">{service.subtitle}</span>
+                <button className="bg-[#00ADAA] text-white p-2 rounded-lg">selengkapnya</button>
+
+                {/* Card content shape decoration (the circle at the top-right corner) */}
+                <div className="absolute top-[-47px] right-[-45px] w-[100px] h-[100px] rotate-[175deg] rounded-full bg-[#ffffff] shadow-[inset_48px_48px_#ffffff]" />
+              </div>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
 }
 
-export default OurService
+export default Service
