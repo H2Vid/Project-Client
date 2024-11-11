@@ -43,7 +43,7 @@ const OurFasilitas = () => {
   }, [])
 
   return (
-    <div className="w-[95%] h-auto mx-auto mt-8 p-10">
+    <div className="w-[95%] h-auto mx-auto mt-8">
       <div className="bg-gray-50 text-gray-900">
         <header className="bg-[#00ADAA] text-white py-6">
           <div className="container mx-auto text-center">

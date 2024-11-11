@@ -87,12 +87,9 @@ const ContactUs = () => {
             <Image width={1000} height={1000} src="/img/call1.png" alt="klinik" className="lg:w-36 lg:h-36 w-12 h-12 md:w-20 md:h-20 rounded-lg" />
 
             {/* Tombol */}
-            <button
-              onClick={handleClick}
-              className="items-center flex space-x-3 before:ease relative h-20 w-72 justify-center overflow-hidden rounded-lg border border-[#00ADAA] bg-[#00ADAA] text-white transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-green-500 hover:before:-translate-x-40"
-            >
+            <button onClick={handleClick} className="bg-[#00ADAA] hover:bg-[#00ADBB]/90 text-gray-100 font-bold py-2 lg:py-4 px-4 rounded inline-flex items-center w-96 justify-center space-x-3">
               <Io.IoLogoWhatsapp size={32} />
-              <span className="relative z-10 text-lg font-semibold">Chat Sekarang Juga</span>
+              <span className="lg:text-lg font-semibold sm:text-sm">Chat Sekarang Juga</span>
             </button>
 
             {/* Gambar kedua */}

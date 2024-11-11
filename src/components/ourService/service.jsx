@@ -32,7 +32,7 @@ const Service = () => {
   }, [])
 
   return (
-    <div className="w-[95%] p-10 mx-auto ">
+    <div className="w-[95%] mx-auto ">
       <h3 className="text-5xl mx-auto tracking-wide font-semibold">Layanan Kami</h3>
       <hr className="w-28 h-1 bg-[#00ADAA] border-0 rounded mt-4 dark:bg-[#00ADAA"></hr>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 h-auto mx-auto mt-8 mb-20" data-aos="fade-up" data-aos-anchor-placement="top-bottom">

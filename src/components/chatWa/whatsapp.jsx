@@ -16,7 +16,7 @@ const Whatsapp = () => {
     window.open(url, "_blank")
   }
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between items-center mx-auto w-[95%] lg:w-[85%] rounded-lg mt-10">
+    <div className="flex flex-col lg:flex-row lg:justify-between items-center mx-auto w-[95%] my-32 space-y-10 lg:w-[85%] rounded-lg">
       {/* Bagian Gambar */}
       <div className="relative w-full lg:w-[400px] mb-6 lg:mb-0">
         <Image
@@ -39,16 +39,13 @@ const Whatsapp = () => {
       </div>
 
       {/* Bagian Teks */}
-      <div className="w-full lg:w-1/2 ml-0 space-y-8 lg:ml-8">
+      <div className="w-full lg:w-1/2 ml-0 space-y-8 lg:ml-8 items-center flex flex-col lg:items-start">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">Konsultasi & Telekonsultasi Dokter</h2>
         <p className="mt-4 text-gray-600 text-lg">
           Jangan biarkan masalah kesehatan mengganggu hidup Anda. Dengan layanan konsultasi yang mudah dan cepat, Anda bisa langsung mendapatkan saran medis dari dokter spesialis. Segera buat janji dan dapatkan solusi terbaik untuk
           kesehatan Anda!
         </p>
-        <button
-          onClick={handleClick}
-          className="items-center flex space-x-3 before:ease relative h-20 w-72 justify-center overflow-hidden rounded-lg border border-[#00ADAA] bg-[#00ADAA] text-white transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-green-500 hover:before:-translate-x-40"
-        >
+        <button onClick={handleClick} className="bg-[#00ADAA] hover:bg-[#00ADBB]/90 text-gray-100 font-bold py-2 lg:py-4 px-4 rounded inline-flex items-center w-96 justify-center space-x-3">
           <Io.IoLogoWhatsapp size={32} />
           <span className="relative z-10 text-lg font-semibold">Chat Sekarang Juga</span>
         </button>
