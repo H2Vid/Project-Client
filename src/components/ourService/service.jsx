@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
+import { React, useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Service = () => {
   const Services = [
@@ -24,11 +27,15 @@ const Service = () => {
     },
   ]
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className="w-[95%] p-10 mx-auto ">
       <h3 className="text-5xl mx-auto tracking-wide font-semibold">Layanan Kami</h3>
       <hr className="w-28 h-1 bg-[#00ADAA] border-0 rounded mt-4 dark:bg-[#00ADAA"></hr>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 h-auto mx-auto mt-8 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 h-auto mx-auto mt-8 mb-20" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         {Services.map((service, i) => {
           return (
             <Link href="#" key={i} className="relative w-full sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] text-[#2e2d31] overflow-hidden rounded-2xl group">

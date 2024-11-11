@@ -1,5 +1,8 @@
+"use client"
 import Image from "next/image"
-import React from "react"
+import { React, useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const SubHeroSection = () => {
   const layananParu = [
@@ -22,6 +25,11 @@ const SubHeroSection = () => {
       imgLayanan: "/img/Paru.png",
     },
   ]
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className="mx-auto mt-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#00ADAA] pb-32 p-8">
@@ -45,7 +53,7 @@ const SubHeroSection = () => {
       </div>
 
       {/* Bagian Card */}
-      <div className="mx-auto w-[95%] md:-mt-32 mt-5 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="mx-auto w-[95%] md:-mt-32 mt-5 grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="flip-right">
         {layananParu.map((layanan, i) => {
           return (
             <div key={i} className="bg-white p-6 rounded-lg shadow-md ">

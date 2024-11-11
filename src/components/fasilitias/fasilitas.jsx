@@ -1,7 +1,8 @@
+"use client"
 import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-// import img from "next/img"
+import { React, useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const OurFasilitas = () => {
   const Fasilitas = [
@@ -36,6 +37,11 @@ const OurFasilitas = () => {
       ket: "Fasilitas rawat inap untuk pasien yang membutuhkan perawatan intensif atau pemulihan jangka panjang. Kami memiliki ruang rawat inap yang nyaman dan dilengkapi dengan fasilitas medis lengkap untuk memantau kesehatan pasien dengan teliti setiap hari.",
     },
   ]
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <div className="w-[95%] h-auto mx-auto mt-8 p-10">
       <div className="bg-gray-50 text-gray-900">
@@ -48,7 +54,7 @@ const OurFasilitas = () => {
 
         <section className="py-16">
           <div className="container mx-auto px-6 text-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12" data-aos="fade-down-right">
               {Fasilitas.map((card, i) => {
                 return (
                   <div key={i} className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out transform">

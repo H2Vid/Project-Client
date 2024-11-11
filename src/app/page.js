@@ -8,7 +8,7 @@ import Service from "@/components/ourService/service"
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <HeroSection />
       <About />
@@ -16,6 +16,6 @@ export default function Home() {
       <OurFasilitas />
       <ContactUs />
       <Footer />
-    </div>
+    </>
   )
 }
