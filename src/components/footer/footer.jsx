@@ -1,3 +1,4 @@
+import Image from "next/image"
 import React from "react"
 
 const Footer = () => {
@@ -7,9 +8,11 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
-              <img
-                src="/path-to-your-logo.png" // Ganti dengan path logo klinikmu
-                className="h-10 me-3"
+              <Image
+                width={1000}
+                height={1000}
+                src="/img/dokterumum.jpg" // Ganti dengan path logo klinikmu
+                className="h-20 me-3 w-32 "
                 alt="Logo Klinik Sehat"
               />
               <span className="self-center text-2xl font-semibold text-gray-100 dark:text-white">Klinik Sehat</span>
