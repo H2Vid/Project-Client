@@ -2,6 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation" // Import usePathname to get the current path
 
 export const Navbar = () => {
   const navigation = [
@@ -11,7 +12,7 @@ export const Navbar = () => {
     },
     {
       bar: "Umum",
-      link: "/pages/umu",
+      link: "/pages/umum",
     },
     {
       bar: "Paru",
@@ -22,17 +23,19 @@ export const Navbar = () => {
       link: "/pages/gigi",
     },
   ]
+
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname() // Get the current path
 
   return (
     <div className="w-full">
-      <nav className="relative flex flex-wrap items-center justify-between py-2 space-x-3 w-[95%] mx-auto lg:justify-center ">
+      <nav className="relative flex flex-wrap items-center justify-between py-2 space-x-3 lg:w-[95%] mx-auto">
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-900">
             <span>
-              <Image src="/img/logo.jpeg" width="32" alt="..." height="32" className="w-8" />
+              <Image src="/img/dokterumum.jpg" width={1000} height={1000} alt="logo" className="w-14 rounded-full" />
             </span>
-            <span>Meall Ap</span>
+            <span>Klinik</span>
           </span>
         </Link>
 
@@ -44,11 +47,18 @@ export const Navbar = () => {
         </button>
 
         {/* Menu - responsive */}
-        <div className={`${isOpen ? "block" : "hidden"} lg:flex lg:items-center lg:w-auto w-full absolute top-16 left-0 right-0 bg-transparent lg:relative lg:top-0 z-10`}>
-          <ul className="flex flex-col lg:flex-row items-end justify-between flex-1 pt-6 list-none lg:pt-0 lg:flex lg:space-x-6">
+        <div className={`${isOpen ? "block" : "hidden"} lg:flex lg:items-center lg:w-auto w-full absolute top-20 left-0 right-0 bg-white lg:bg-transparent lg:relative lg:top-0 z-10 shadow-lg lg:shadow-none`}>
+          <ul className="flex flex-col lg:flex-row items-end justify-between flex-1 py-6 lg:py-0 space-y-3 lg:space-y-0 list-none lg:pt-0 lg:flex lg:space-x-6">
             {navigation.map((menu, index) => (
-              <li className="nav__item" key={index}>
-                <Link href={menu.link} className="block px-4 py-2 text-[19px] font-normal text-gray-800 no-underline rounded-md dark:text-black hover:text-[#22605f] focus:text-[#00ADAA]">
+              <li className="nav__item mr-10" key={index}>
+                <Link
+                  href={menu.link}
+                  className={`block px-5 py-1 text-[19px] font-normal rounded-md transition-all duration-200 ${
+                    pathname === menu.link
+                      ? "text-white bg-[#00ADAA]" // Active link styling
+                      : "text-gray-800 dark:text-black hover:text-[#22605f] focus:text-[#00ADAA]"
+                  }`}
+                >
                   {menu.bar}
                 </Link>
               </li>
