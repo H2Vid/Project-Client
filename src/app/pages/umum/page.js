@@ -4,7 +4,7 @@ import Footer from "@/components/footer/footer"
 import SubHeroSection from "@/components/heroSectionLayanan/subHeroSection"
 import { Navbar } from "@/components/navbar/Navbar"
 
-export default function Gigi() {
+export default function Umum() {
   return (
     <div>
       <Navbar />
