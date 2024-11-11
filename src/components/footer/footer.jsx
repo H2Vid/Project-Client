@@ -4,7 +4,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer className="bg-white shadow-md dark:bg-[#00ADAA] text-white">
+    <footer className="shadow-md bg-[#00ADAA] text-white">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -16,13 +16,13 @@ const Footer = () => {
                 className="h-20 me-3 w-32 "
                 alt="Logo Klinik Sehat"
               />
-              <span className="self-center text-2xl font-semibold text-gray-100 dark:text-white">Klinik Sehat</span>
+              <span className="self-center text-2xl font-semibold text-gray-100">Klinik Sehat</span>
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             {/* Layanan Kami */}
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase dark:text-white">Layanan Kami</h2>
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase">Layanan Kami</h2>
               <ul className="text-gray-100 dark:text-gray-100 font-medium">
                 <li className="mb-4">
                   <Link href="/dokter" className="hover:underline">
@@ -49,7 +49,7 @@ const Footer = () => {
 
             {/* Kontak Klinik */}
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase dark:text-white">Kontak Kami</h2>
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase">Kontak Kami</h2>
               <ul className="text-gray-100 dark:text-gray-100 font-medium">
                 <li className="mb-4">
                   <Link href="tel:+62123456789" className="hover:underline">
@@ -74,7 +74,7 @@ const Footer = () => {
 
             {/* Ikuti Kami */}
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase dark:text-white">Ikuti Kami</h2>
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase">Ikuti Kami</h2>
               <ul className="text-gray-100 dark:text-gray-100 font-medium">
                 <li className="mb-4">
                   <Link href="https://facebook.com/kliniksehat" className="hover:underline">
@@ -100,7 +100,7 @@ const Footer = () => {
 
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-100 sm:text-center dark:text-gray-100">
-            © 2023{" "}
+            © 2024
             <Link href="/" className="hover:underline">
               Klinik Sehat™
             </Link>
